@@ -1,14 +1,14 @@
-@charset "UTF-8";
+@charset "UTF-8"; /*Define o formato de codificação de caracteres utilizado*/
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"); /*Importa coisas para o folha de estilos. No caso, aqui está sendo importada uma fonte externa*/
 
-@font-face {
-   font-family: "Android";
-   src: url("../fontes/idroid.otf") format("opentype");
+@font-face { /*Essa regra serve para incluir, na sua folha de estilos, uma fonte externa que esteja localmente na sua máquina*/
+   font-family: "Android"; /*Vai definir o nome que essa fonte a ser incluída terá*/
+   src: url("../fontes/idroid.otf") format("opentype"); /*Serve para indicar o caminho da fonte externa em sua máquina. format serve para dizer qual o formato que o arquivo da fonte está*/
    font-weight: normal;
 }
 
-:root {
+:root { /*Pseudo-classe usada para definir variáveis globais*/
    --cor0: #c5ebd6;
    --cor1: #83e1ad;
    --cor2: #3ddc84;
@@ -21,42 +21,42 @@
    --font-android: "Android", cursive;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+* { /*O asterísco é um seletor universal. Ou seja, ele define que todos os elementos presentes no documento html que use este docmento css como folha de estilo tenham essas propriedades abaixo*/
+    margin: 0px; /*Definie a margem do elemento. Consulte a domentação para entender como funciona o comando completo e sua abreviação (shorthand)*/
+    padding: 0px; /*Define o espaço entre o conteúdo da caixa e a borda dela*/
 }
 
 body {
-   background-color: var(--cor0);
-   font-family: var(--font-padrao);
+   background-color: var(--cor0); /*Define o cor de fundo do elemento*/
+   font-family: var(--font-padrao); /*Define o nome da fonte usado pelo elemento*/
 }
 
-a.externo::after {
-    content: '\1F517';
+a.externo::after { /*o pseudo-elemento ::after serve para adicionar algo antes de um outro elemento*/
+    content: '\1F517'; /*Serve para adicionar conteúdo a um elemento*/
 }
 
 main p {
-    text-align: justify;
+    text-align: justify; /*Define o alinhamento do texto*/
     margin: 15px 0px;
-    text-indent: 30px;
-    line-height: 2em;
-    font-size: 1em;
+    text-indent: 30px; /*Define o comprimento do recuo colocado antes das linhas de texto em um bloco.*/
+    line-height: 2em; /*Define o espaço entre as linhas de um elemento*/
+    font-size: 1em; /*Define o tamanho da fonte de um elemento*/
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 150px;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /*Esse código adiciona degradê ao fundo*/
+    min-height: 150px; /*define uma altura mínima para um elemento*/
     text-align: center;
-    padding-top: 40px;
+    padding-top: 40px; /*Define o preenchimento somente do topo do documento*/
 }
 
 header > h1 {
-   color: white;
+   color: white; /*Define a cor do texto*/
    font-family: var(--font-destaque);
    margin-bottom: 20px;
    font-size: 3em;
-   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
-   font-weight: normal;
+   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418); /*Adiciona sombras ao texto. Funciona de modo semelhante ao box-shadow*/
+   font-weight: normal; /*Define a grossura do glifo/letra de uma fonte*/
 }
 
 header > p {
@@ -64,7 +64,7 @@ header > p {
     font-family: var(--font-padrao);
     font-size: 1.2em;
     margin: auto;
-    max-width: 600px;
+    max-width: 600px; /*Define o tamanho máximo de um elemento*/
     padding-left: 10px;
     padding-right: 10px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
@@ -74,18 +74,18 @@ nav {
     background-color: var(--cor5);
     padding: 10px;
     box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.192);
-    position: sticky;
-    top: 0px;
-    z-index: 2;
+    position: sticky; /*especifica o tipo de método de posicionamento usado para um elemento (static, relative, fixed, absolute, sticky).*/
+    top: 0px; /*Define a posição vertical de um elemento posicionado (position: static | relative | absolute | fixed | sticky)*/
+    z-index: 2; /*especifica a ordem de pilha de um elemento, ou seja, define a sobreposição de elementos*/
 }
 
 nav > a {
-    text-decoration: none;
+    text-decoration: none; /*Define a aparência das linhas decorativas no texto*/
     color: white;
     padding: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition-duration: 500ms;
+    font-weight: bold; /*Define a grossura do glifo/letra de uma fonte*/
+    border-radius: 5px; /*Define o arredondamento da quinas de uma caixa*/
+    transition-duration: 500ms; /*Define o tempo que uma animação de transição deve levar para ser concluída.*/
     
 }
 
@@ -141,13 +141,13 @@ main h2 {
 }
 
 main img {
-    width: 100%;
+    width: 100%; /*Define a largura de um elemento*/
 }
 
 main img.pequena {
     max-width: 350px;
     margin: auto;
-    display: block;
+    display: block; /*Propriedade utilizada para organizar os elementos na página HTML.*/
 }
 
 div.video{
@@ -183,8 +183,8 @@ aside >h3 {
 
 aside > ul {
     list-style-type: '\2714\00A0\00A0'; /*Não é compatível com todos os navegadores*/
-    list-style-position: inside;
-    columns: 2;
+    list-style-position: inside; /*Define a posição relativa a um item da lista*/
+    columns: 2; /*Define o número de colunas a serem usadas ao desenhar o conteúdo de um elemento. */
 }
 
 aside abbr {
